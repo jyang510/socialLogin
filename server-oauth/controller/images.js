@@ -1,7 +1,8 @@
 const images = require('../resources/resources');
 
 module.exports = (req, res) => {
-  // TODO : Mypage로부터 access token을 제대로 받아온 것이 맞다면, resource server의 images를 클라이언트로 보내주세요.
+  //걍 필요 없는 파일이에요 유어클래스의 잔재
+  
   console.log(req.headers.authorization);
   if (!req.headers.authorization) {
     res.status(403).send({

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from 'axios';
 
 //구글 openID로 받은 idToken이 jwt방식으로 된 거라 decode해주기 위해 import받는 모듈
 import jwtDecode from "jwt-decode";
@@ -10,7 +9,7 @@ class Mypage extends Component {
     super(props);
     this.state = {
       // TODO: GitHub API 를 통해서 받아올 수 있는 정보들 중에서
-      // 이름, login 아이디, repository 주소, public repositoty 개수를 포함한 다양한 정보들을 담아주세요.
+      // 저희 유저 DB 만들 때 필요하다고 생각된 부분인데, 만약 더 필요한 게 있다 싶으면 말해주세요
       email: '',
       name: '',
       picture: ''
@@ -18,11 +17,6 @@ class Mypage extends Component {
   }
 
   async getGoogleUserInfo() {
-    // TODO: GitHub API를 통해 사용자 정보를 받아오세요.
-    // https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-the-authenticated-user
-
-    //userInfo를 얻으려면 엑세스 토큰을 받아와서 그걸로 get 요청을 해야 하는 것 같음 
-    // console.log(this.props);
     const id_token = this.props.idToken;
     console.log(`id_token은 ${id_token}`);
 

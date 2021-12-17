@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import qs from 'qs';
+    /* 구글 API 일련의 과정
+    구글 로그인 버튼을 누른다
+    => 클라이언트에서 인가url로 이동하여 확인을 하고, 확인이 되면 authorize_code를 받아서 클라서버에 axios 요청을 한다
+    => 클라에서 받은 코드를 가지고 그 외 필요한 정보들(clientID, secret, grant_type 등등)을 포함해서 token 요청을 한다
+    => 우리에게 필요한 게 들어있는건 id_token이기 때문에 jwt토큰화된 id_token을 decoding 해줘서 원하는 값을 추출해낸다
+    => 추출해낸 값들을 DB에 저장하고, 클라이언트에 보낼 건 보내주고 과정을 마친다
+    */
 
 const CLIENT_ID = "240166666352-jrcs8avt11vl8dp0hgo60qgnhf2t9rnn.apps.googleusercontent.com";
 const AUTHORIZE_URI = "https://accounts.google.com/o/oauth2/v2/auth";
