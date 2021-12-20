@@ -26,7 +26,7 @@ module.exports = (req, res) => {
   //생성 service_provider: 'NAVER'
 
   //토큰 발급시 호출 함수만 작성이 되어있음. 갱신, 삭제에 대해서는 아직 구현이 안 됨.
-  const redirectURI = encodeURI('http://localhost:3000');
+  const redirectURI = encodeURI('https://d1839m99iakp36.cloudfront.net');
   const code = req.body.authorizationCode;
   const state = req.body.state; 
 

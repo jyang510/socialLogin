@@ -7,7 +7,7 @@ const AUTHORIZE_URI = "https://nid.naver.com/oauth2.0/authorize";
 const queryStr = qs.stringify({
   client_id: 'cwNXt0ItxMlOlF3gnPSl',
   //window.location.href를 통해 현재 url을 긁어올 수 있다. 이쪽으로 리다이렉트가 되는 거임.
-  redirect_uri: 'http://localhost:3000',
+  redirect_uri: 'https://d1839m99iakp36.cloudfront.net',
   //token으로 설정하면 Oauth 인가 방식 중 가장 간단한 implicit grant 방식이 적용된다.
   response_type: 'code', // 보안상의 이슈로 code => 서버에서 구글 api를 통해 token
   state: 'hello'
