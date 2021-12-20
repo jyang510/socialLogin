@@ -20,7 +20,10 @@ class Mypage extends Component {
     const id_token = this.props.idToken;
     console.log(`id_token은 ${id_token}`);
 
-    const { email, name, picture } = jwtDecode(id_token);
+    const decode = jwtDecode(id_token);
+    console.log(`decode의 값은 이러하다\n`);
+    console.log(decode);
+    const { email, name, picture } = decode;
     console.log(`email은 ${email}`);
     console.log(`name은 ${name}`);
     console.log(`picture은 ${picture}`);
